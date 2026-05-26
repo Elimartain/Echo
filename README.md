@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Echo
 
-## Getting Started
+Echo is an AI memory assistant that helps you capture, summarize, and search context from emails and meetings.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js (App Router) + React + TypeScript
+- Tailwind CSS
+- Supabase (Auth + Postgres)
+- Gmail API
+- Groq API
+- whisper.cpp (local transcription)
+
+## Demo Screenshot
+
+Add your screenshot here after upload:
+
+`![Echo Demo](./public/demo.png)`
+
+## Run Locally
+
+1. Install dependencies:
+   - `npm install`
+2. Create env file:
+   - Copy `.env.example` to `.env.local`
+   - Fill all required values
+3. Create database schema:
+   - Run `supabase/schema.sql` in your Supabase SQL editor
+4. Configure Google OAuth in Supabase:
+   - Enable Google provider
+   - Add redirect URL: `http://localhost:3000/auth/callback`
+5. (Optional for meetings) Install `whisper.cpp` and model, then set:
+   - `WHISPER_CPP_BIN`
+   - `WHISPER_MODEL_PATH`
+6. Start development server:
+   - `npm run dev`
+7. Open:
+   - `http://localhost:3000`
+
+## LinkedIn
+
+**[Anish Raj](https://in.linkedin.com/in/anish-raj-3976b029b)**
+
+LinkedIn profile badge (for websites that allow the embed script):
+
+```html
+<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="anish-raj-3976b029b" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/anish-raj-3976b029b?trk=profile-badge">Anish Raj</a></div>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
