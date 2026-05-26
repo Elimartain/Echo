@@ -13,7 +13,7 @@ Echo is an AI memory assistant that helps you capture, summarize, and search con
 
 ## Demo Screenshot
 
-public/image_2026-05-27_041156710.png
+[public/image_2026-05-27_041156710.png](https://github.com/Elimartain/Echo/blob/c45d8ce17fcf324dca4c5ae7af30ee36e98c750a/public/image_2026-05-27_041156710.png)
 
 ## Run Locally
 
